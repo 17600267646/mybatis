@@ -17,7 +17,7 @@ public class PerTest {
         //queryById();
        selectAllUser();
     }
-
+    /*查询所有用户*/
     private static void selectAllUser() {
         SqlSession session = MybatisUtil.getSqlSession();
         PersonMapper personMapper = session.getMapper(PersonMapper.class);
@@ -32,7 +32,7 @@ public class PerTest {
             MybatisUtil.closeSession(session);
         }
     }
-
+    /*根据id查找摸个用户*/
     private static void queryById() {
         SqlSession session = MybatisUtil.getSqlSession();
         PersonMapper personMapper = session.getMapper(PersonMapper.class);
@@ -47,7 +47,7 @@ public class PerTest {
             MybatisUtil.closeSession(session);
         }
     }
-
+/*删除用户*/
     private static void deleteByd() {
 
         SqlSession session = MybatisUtil.getSqlSession();
@@ -86,58 +86,5 @@ public class PerTest {
             MybatisUtil.closeSession(session);
         }
     }
-
-
-    /**
-     * 删除用户
-     */
-        /*private static void deleteUser(){
-            SqlSession session=DBTools.getSession();
-            UserMapper mapper=session.getMapper(UserMapper.class);
-            try {
-                mapper.deleteUser(1);
-                session.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-                session.rollback();
-            }
-        }
-
-
-        *//**
-     * 根据id查询用户
-     *//*
-        private static void selectUserById(){
-            SqlSession session=DBTools.getSession();
-            UserMapper mapper=session.getMapper(UserMapper.class);
-            try {
-                UserBean user=    mapper.selectUserById(2);
-                System.out.println(user.toString());
-
-                session.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-                session.rollback();
-            }
-        }
-
-        *//**
-     * 查询所有的用户
-     *//*
-        private static void selectAllUser(){
-            SqlSession session=DBTools.getSession();
-            UserMapper mapper=session.getMapper(UserMapper.class);
-            try {
-                List<UserBean> user=mapper.selectAllUser();
-                System.out.println(user.toString());
-                session.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-                session.rollback();
-            }
-        }
-
-
-    }*/
 
 }
