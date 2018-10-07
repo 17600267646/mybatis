@@ -32,7 +32,7 @@ public class PerTest {
             MybatisUtil.closeSession(session);
         }
     }
-    /*根据id查找某个***********用户*/
+    /*根据id查找某个用户*/
     private static void queryById() {
         SqlSession session = MybatisUtil.getSqlSession();
         PersonMapper personMapper = session.getMapper(PersonMapper.class);
