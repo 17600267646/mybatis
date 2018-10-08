@@ -3,6 +3,7 @@ package service;
 import model.Person;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2018/10/6 0006.
@@ -13,4 +14,7 @@ public interface PersonMapper {
     public  int deleteById(Person person) throws Exception;
     public  Person queryById(int id ) throws Exception;
     public List<Person> selectAllPerson() throws  Exception;
+    public int batchSave(List<Person> list) throws  Exception;
+    public  int batchDelete(List<Person> list) throws  Exception;
+    public int batchUpdate(List<Person> list);
 }
