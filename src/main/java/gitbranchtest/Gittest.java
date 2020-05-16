@@ -5,5 +5,8 @@ public class Gittest {
         System.out.println("master测试");
         System.out.println("提交到本地本地仓库后revert");
 
+        System.out.println("1git ");
+
+
     }
 }
