@@ -9,6 +9,6 @@ public class Gittest {
 
         System.out.println("3git ");
 
-
+        System.out.println("masterdev测试 master提交");
     }
 }
